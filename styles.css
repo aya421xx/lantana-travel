@@ -38,3 +38,20 @@
 /* Keep hero copy vertically centered and entirely inside the image */
 @media(min-width:761px){#home .hero{height:clamp(690px,78vh,850px)}#home .hero-content{top:49%;transform:translate(-50%,-50%);width:min(720px,72vw)}#home .hero-content h1{font-size:clamp(65px,7.1vw,118px);line-height:1.04;margin-bottom:24px}#home .hero-content .hero-jp{font-size:clamp(20px,1.8vw,29px);line-height:1.6;margin-bottom:10px}#home .hero-content .hero-sub{font-size:12px;line-height:1.8}#home .hero-content .hero-link{margin-top:16px}}
 @media(max-width:760px){#home .hero-content h1{font-size:clamp(48px,11vw,76px);line-height:1.04}#home .hero-content .hero-jp{font-size:18px;line-height:1.6}#home .hero-content .hero-sub{font-size:11px;line-height:1.8}}
+
+/* Match the wide cinematic reference framing rather than cropping the photos */
+@media(min-width:761px){
+#home .hero{height:auto;min-height:0;aspect-ratio:1891/760;max-height:none}
+#home .hero-photo{background-size:100% auto;background-position:center center}
+#home .hero-photo-venice{background-size:100% auto;background-position:center 50%}
+#home .hero-photo-japan{background-size:100% auto;background-position:center 50%}
+#home .hero-content{top:49%;width:min(680px,55vw);transform:translate(-50%,-50%)}
+#home .hero-content h1{font-size:clamp(45px,6.2vw,112px);line-height:1.02;margin:0 0 19px}
+#home .hero-content .eyebrow{margin-bottom:20px}
+#home .hero-content .hero-jp{font-size:clamp(15px,1.65vw,29px);line-height:1.65;margin-bottom:11px}
+#home .hero-content .hero-sub{font-size:clamp(9px,.75vw,13px);line-height:1.85}
+#home .hero-content .hero-link{margin-top:15px}
+#home .hero-destination-label{bottom:5%}
+}
+@media(min-width:761px) and (max-width:1100px){#home .hero{min-height:470px}#home .hero-content h1{font-size:clamp(48px,6vw,75px)}}
+@media(max-width:760px){#home .hero-photo{background-size:cover}#home .hero-content{width:90%}}
