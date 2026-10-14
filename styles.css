@@ -73,3 +73,10 @@
 html[lang="en"] .nav{font-family:'DM Sans',sans-serif;font-size:12px;gap:clamp(10px,1.3vw,24px)}
 html[lang="en"] .hero-content .hero-jp{letter-spacing:.02em}
 html[lang="en"] .home-journey-info h3{font-size:clamp(30px,3vw,50px)}
+
+/* Keep language selector visible even when the navigation is wide */
+.header{position:relative}
+.header>.language-switch{position:absolute;right:6%;top:4px;z-index:60;display:flex!important;align-items:center;justify-content:center;gap:7px;min-width:76px;height:28px;margin:0;padding:0 6px;background:#faf9f6;border:1px solid #e3ddd2;border-radius:3px;color:#314c55;font-size:11px;line-height:1}
+.header>.language-switch a{display:inline-block;padding:5px 2px}
+@media(min-width:761px){.header>.nav{padding-top:14px}.header>.brand{margin-top:12px}}
+@media(max-width:760px){.header>.language-switch{top:26px;right:74px;height:34px}.header>.nav{padding-top:30px}}
