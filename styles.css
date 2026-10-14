@@ -34,3 +34,7 @@
 #home .hero-destination-japan{right:7%}
 #home .hero-index{display:none}
 @media(max-width:760px){#home .hero{min-height:650px;height:85svh}#home .hero-photo-venice{clip-path:polygon(0 0,100% 0,100% 46%,0 57%);background-position:center}#home .hero-photo-japan{clip-path:polygon(0 57%,100% 46%,100% 100%,0 100%);background-position:center}#home .hero-shade{background:linear-gradient(180deg,rgba(12,35,43,.15),rgba(12,35,43,.48) 46%,rgba(12,35,43,.24))}#home .hero-content{left:50%;top:50%;width:88%;transform:translate(-50%,-50%)}#home .hero-content h1{font-size:clamp(54px,13vw,82px)}#home .hero-destination-label{bottom:18px;font-size:9px}#home .hero-destination-overseas{left:7%}#home .hero-destination-japan{right:7%}}
+
+/* Keep hero copy vertically centered and entirely inside the image */
+@media(min-width:761px){#home .hero{height:clamp(690px,78vh,850px)}#home .hero-content{top:49%;transform:translate(-50%,-50%);width:min(720px,72vw)}#home .hero-content h1{font-size:clamp(65px,7.1vw,118px);line-height:1.04;margin-bottom:24px}#home .hero-content .hero-jp{font-size:clamp(20px,1.8vw,29px);line-height:1.6;margin-bottom:10px}#home .hero-content .hero-sub{font-size:12px;line-height:1.8}#home .hero-content .hero-link{margin-top:16px}}
+@media(max-width:760px){#home .hero-content h1{font-size:clamp(48px,11vw,76px);line-height:1.04}#home .hero-content .hero-jp{font-size:18px;line-height:1.6}#home .hero-content .hero-sub{font-size:11px;line-height:1.8}}
