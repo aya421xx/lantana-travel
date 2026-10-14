@@ -18,3 +18,19 @@
 .home-journey-tile > .home-journey-photo img{width:100%;height:100%;object-fit:cover}
 @media(max-width:900px){.home-journey-tile > .home-journey-info{top:25%}}
 @media(max-width:760px){.home-journey-tile > .home-journey-info{top:23%;padding-left:0;width:76%}}
+
+/* Split international and Japan homepage hero */
+#home .hero{isolation:isolate;background:#1a3744;min-height:700px}
+#home .hero-photo{animation:none;transform:none;position:absolute;inset:0;background-size:cover;background-repeat:no-repeat}
+#home .hero-photo-venice{background-image:url('https://images.unsplash.com/photo-1514890547357-a9ee288728e0?w=2000&q=85');background-position:center 55%;clip-path:polygon(0 0,61% 0,43% 100%,0 100%)}
+#home .hero-photo-japan{background-image:url('https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?w=2000&q=85');background-position:center 52%;clip-path:polygon(61% 0,100% 0,100% 100%,43% 100%)}
+#home .hero-shade{background:linear-gradient(90deg,rgba(9,30,39,.22),rgba(9,30,39,.42) 47%,rgba(9,30,39,.16))}
+#home .hero-content{left:50%;width:min(640px,65vw);max-width:none;transform:translateX(-50%);text-align:center;z-index:3}
+#home .hero-content h1{font-size:clamp(70px,8.5vw,148px);line-height:.98}
+#home .hero-content .hero-link{display:inline-flex;justify-content:center}
+#home .hero-destination-label{position:absolute;bottom:36px;z-index:4;color:white;font:12px 'DM Sans',sans-serif;letter-spacing:.17em;text-shadow:0 1px 7px #152d36}
+#home .hero-destination-label span{padding:0 12px}
+#home .hero-destination-overseas{left:7%}
+#home .hero-destination-japan{right:7%}
+#home .hero-index{display:none}
+@media(max-width:760px){#home .hero{min-height:650px;height:85svh}#home .hero-photo-venice{clip-path:polygon(0 0,100% 0,100% 46%,0 57%);background-position:center}#home .hero-photo-japan{clip-path:polygon(0 57%,100% 46%,100% 100%,0 100%);background-position:center}#home .hero-shade{background:linear-gradient(180deg,rgba(12,35,43,.15),rgba(12,35,43,.48) 46%,rgba(12,35,43,.24))}#home .hero-content{left:50%;top:50%;width:88%;transform:translate(-50%,-50%)}#home .hero-content h1{font-size:clamp(54px,13vw,82px)}#home .hero-destination-label{bottom:18px;font-size:9px}#home .hero-destination-overseas{left:7%}#home .hero-destination-japan{right:7%}}
