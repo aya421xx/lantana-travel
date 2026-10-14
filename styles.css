@@ -61,3 +61,15 @@
 #home .hero-shade{z-index:2}
 #home .hero-content{z-index:3}
 #home .hero-scroll,#home .hero-destination-label{z-index:4}
+
+/* Bilingual navigation */
+.language-switch{display:flex;align-items:center;gap:7px;white-space:nowrap;margin-left:4px;font:11px 'DM Sans',sans-serif;letter-spacing:.09em;color:#63757a;flex-shrink:0}
+.language-switch a{padding:7px 3px;transition:color .2s}
+.language-switch a[aria-current="page"]{color:#173d49;font-weight:700;border-bottom:1px solid #b58e67}
+.language-switch a:hover{color:#b58e67}
+.language-switch span{opacity:.4}
+@media(min-width:761px){.header{gap:16px}.nav{gap:clamp(12px,1.7vw,36px)}.language-switch{margin-left:auto}}
+@media(max-width:760px){.language-switch{margin-left:auto;margin-right:14px;position:relative;z-index:25}.header{gap:8px}}
+html[lang="en"] .nav{font-family:'DM Sans',sans-serif;font-size:12px;gap:clamp(10px,1.3vw,24px)}
+html[lang="en"] .hero-content .hero-jp{letter-spacing:.02em}
+html[lang="en"] .home-journey-info h3{font-size:clamp(30px,3vw,50px)}
