@@ -80,3 +80,10 @@ html[lang="en"] .home-journey-info h3{font-size:clamp(30px,3vw,50px)}
 .header>.language-switch a{display:inline-block;padding:5px 2px}
 @media(min-width:761px){.header>.nav{padding-top:14px}.header>.brand{margin-top:12px}}
 @media(max-width:760px){.header>.language-switch{top:26px;right:74px;height:34px}.header>.nav{padding-top:30px}}
+
+/* Always-visible language control on inner pages */
+.inner-language-bar{display:flex;align-items:center;justify-content:flex-end;padding:8px 6%;background:#f8f6f1;border-top:1px solid #ece8df;border-bottom:1px solid #ece8df;min-height:44px}
+.inner-language-bar .language-switch{display:flex!important;position:static!important;gap:12px;align-items:center;margin:0;background:transparent;border:0;font-size:13px;letter-spacing:.08em}
+.inner-language-bar .language-switch a{padding:5px 10px;border-radius:2px}
+.inner-language-bar .language-switch a[aria-current="page"]{background:#173d49;color:white;border:0}
+@media(max-width:760px){.inner-language-bar{padding:6px 6%}}
