@@ -55,3 +55,9 @@
 }
 @media(min-width:761px) and (max-width:1100px){#home .hero{min-height:470px}#home .hero-content h1{font-size:clamp(48px,6vw,75px)}}
 @media(max-width:760px){#home .hero-photo{background-size:cover}#home .hero-content{width:90%}}
+
+/* Prepared exact composite hero asset: once assets/lantana-hero-venice-fuji.webp is uploaded, it overlays the older split photographs while all text stays editable HTML. */
+#home .hero::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background-image:url("assets/lantana-hero-venice-fuji.webp");background-repeat:no-repeat;background-position:center;background-size:cover}
+#home .hero-shade{z-index:2}
+#home .hero-content{z-index:3}
+#home .hero-scroll,#home .hero-destination-label{z-index:4}
