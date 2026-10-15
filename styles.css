@@ -87,3 +87,7 @@ html[lang="en"] .home-journey-info h3{font-size:clamp(30px,3vw,50px)}
 .inner-language-bar .language-switch a{padding:5px 10px;border-radius:2px}
 .inner-language-bar .language-switch a[aria-current="page"]{background:#173d49;color:white;border:0}
 @media(max-width:760px){.inner-language-bar{padding:6px 6%}}
+
+/* Final language switch alignment: avoid borders and neighboring controls */
+@media(min-width:761px){.header>.language-switch{top:50%;transform:translateY(-50%);right:2%;height:40px;padding:0 10px}.header:has(>.language-switch)>.nav{margin-right:100px;padding-top:0}.header:has(>.language-switch)>.brand{margin-top:0}}
+@media(max-width:760px){.header>.language-switch{top:50%;transform:translateY(-50%);right:72px;height:36px}.inner-language-bar{justify-content:flex-end}}
