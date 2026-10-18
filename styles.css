@@ -111,3 +111,37 @@ html[lang="en"] .home-journey-info h3{font-size:clamp(30px,3vw,50px)}
 }
 
 
+
+/* Faster day-cycle: original Venice/Fuji image remains unchanged. */
+#home .hero{isolation:isolate}
+#home .hero-sunrise,#home .hero-daylight{
+ position:absolute;inset:0;z-index:2;pointer-events:none;
+ background:url("assets/lantana-hero-venice-fuji-v2.webp") center/cover no-repeat;
+ opacity:0;
+}
+#home .hero-sunrise{
+ filter:brightness(1.13) saturate(.9) sepia(.23) hue-rotate(-10deg);
+ background-color:rgba(255,173,132,.22);background-blend-mode:screen;
+}
+#home .hero-daylight{
+ filter:brightness(1.47) contrast(.94) saturate(1.1) hue-rotate(7deg);
+ background-color:rgba(157,209,255,.2);background-blend-mode:screen;
+}
+#home .hero-shade{z-index:3}
+#home .hero-content{z-index:4}
+#home .hero-scroll,#home .hero-destination-label,#home .hero-index{z-index:5}
+@media(prefers-reduced-motion:no-preference){
+ #home .hero-sunrise{animation:lantanaFastSunrise 12s ease-in-out infinite}
+ #home .hero-daylight{animation:lantanaFastDaylight 12s ease-in-out infinite}
+ @keyframes lantanaFastSunrise{
+  0%,8%{opacity:.95}
+  30%,88%{opacity:0}
+  100%{opacity:.95}
+ }
+ @keyframes lantanaFastDaylight{
+  0%,18%{opacity:0}
+  36%,51%{opacity:1}
+  70%,100%{opacity:0}
+ }
+}
+@media(prefers-reduced-motion:reduce){#home .hero-sunrise,#home .hero-daylight{animation:none!important;opacity:0!important}}
