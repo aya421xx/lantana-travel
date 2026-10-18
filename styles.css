@@ -94,11 +94,6 @@ html[lang="en"] .home-journey-info h3{font-size:clamp(30px,3vw,50px)}
 
 /* Lightweight editorial motion. No additional images, fonts or libraries. */
 @media(prefers-reduced-motion:no-preference){
- #home .hero-content>.eyebrow{animation:lantanaRise .7s ease-out both}
- #home .hero-content>h1{animation:lantanaRise .85s .12s ease-out both}
- #home .hero-content>.hero-jp{animation:lantanaRise .85s .22s ease-out both}
- #home .hero-content>.hero-sub{animation:lantanaRise .85s .3s ease-out both}
- #home .hero-content>.hero-link{animation:lantanaRise .85s .38s ease-out both}
  @keyframes lantanaRise{from{opacity:0;transform:translate3d(0,18px,0)}to{opacity:1;transform:translate3d(0,0,0)}}
  #home .motion-ready{opacity:0;transform:translate3d(0,22px,0);transition:opacity .75s ease,transform .75s cubic-bezier(.22,1,.36,1);transition-delay:var(--motion-delay,0ms)}
  #home .motion-ready.motion-visible{opacity:1;transform:translate3d(0,0,0)}
@@ -114,3 +109,25 @@ html[lang="en"] .home-journey-info h3{font-size:clamp(30px,3vw,50px)}
  #home .motion-ready{opacity:1!important;transform:none!important;transition:none!important}
  #home .hero-content>*{animation:none!important}
 }
+
+/* Venice × Fuji: soft cinematic sunlight drifting over the photograph.
+   Single CSS-only overlay; the hero image and text stay unchanged. */
+#home .hero::after{
+ content:"";position:absolute;inset:-18% -45%;z-index:2;pointer-events:none;
+ background:linear-gradient(110deg,transparent 29%,rgba(255,225,172,.025) 39%,rgba(255,236,196,.14) 48%,rgba(255,243,214,.20) 51%,rgba(255,224,171,.09) 57%,transparent 69%);
+ transform:translate3d(-38%,0,0);opacity:0;will-change:transform,opacity;
+}
+#home .hero-shade{z-index:3}
+#home .hero-content{z-index:4}
+#home .hero-scroll,#home .hero-destination-label,#home .hero-index{z-index:5}
+@media(prefers-reduced-motion:no-preference){
+ #home .hero::after{animation:lantanaSunbeam 14s ease-in-out infinite}
+ @keyframes lantanaSunbeam{
+  0%,9%{transform:translate3d(-38%,0,0);opacity:0}
+  22%{opacity:.62}
+  52%{opacity:.76}
+  76%{transform:translate3d(38%,0,0);opacity:0}
+  100%{transform:translate3d(38%,0,0);opacity:0}
+ }
+}
+@media(prefers-reduced-motion:reduce){#home .hero::after{animation:none;opacity:0;will-change:auto}}
