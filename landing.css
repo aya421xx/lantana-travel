@@ -50,10 +50,3 @@
 @keyframes lantanaHeroLight{0%,100%{opacity:.16}28%{opacity:.78}53%{opacity:1}78%{opacity:.36}}
 @keyframes lantanaHeroShade{0%,100%{opacity:1}28%{opacity:.72}53%{opacity:.56}78%{opacity:.9}}
 @media(prefers-reduced-motion:reduce){.hero::before,.hero::after{animation:none}.hero::before{opacity:.4}}
-
-/* Share the English homepage's Venice / Fuji split background with Japanese homepage. */
-.hero{background-image:none;background-color:#173f50;overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:url('https://images.unsplash.com/photo-1514890547357-a9ee288728e0?w=2000&q=85') center 55%/cover no-repeat;clip-path:polygon(0 0,61% 0,43% 100%,0 100%);mix-blend-mode:normal;animation:none;opacity:1}
-.hero .hero-fuji{position:absolute;inset:0;z-index:0;pointer-events:none;background:url('https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?w=2000&q=85') center 52%/cover no-repeat;clip-path:polygon(61% 0,100% 0,100% 100%,43% 100%)}
-.hero::after{z-index:1}
-@media(max-width:700px){.hero::before{clip-path:polygon(0 0,100% 0,100% 46%,0 57%)}.hero .hero-fuji{clip-path:polygon(0 57%,100% 46%,100% 100%,0 100%)}}
