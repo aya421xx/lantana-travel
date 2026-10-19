@@ -42,11 +42,18 @@
 .hero-inner h1{font-size:clamp(34px,3.7vw,53px);letter-spacing:.025em;line-height:1.5;max-width:min(570px,49vw)}
 @media(max-width:700px){.hero-inner h1{font-size:clamp(30px,7vw,40px);letter-spacing:.015em;max-width:92%}}
 
-/* Japanese homepage: gentle morning -> daylight -> evening cycle, like the English hero. */
+
+/* Same 12-second dawn/day/evening lighting cycle as English homepage. Keep the Japanese hero image and layout unchanged. */
 .hero{isolation:isolate}
-.hero::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:linear-gradient(110deg,rgba(255,187,118,.23),rgba(255,230,175,.19) 45%,rgba(255,239,206,.25));mix-blend-mode:screen;animation:lantanaHeroLight 16s ease-in-out infinite}
-.hero::after{animation:lantanaHeroShade 16s ease-in-out infinite}
+.hero::before,.hero .hero-daylight{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:url("assets/lantana-hero-venice-fuji-v2.webp") center/cover no-repeat;opacity:0}
+.hero::before{filter:brightness(1.13) saturate(.9) sepia(.23) hue-rotate(-10deg);background-color:rgba(255,173,132,.22);background-blend-mode:screen}
+.hero .hero-daylight{filter:brightness(1.47) contrast(.94) saturate(1.1) hue-rotate(7deg);background-color:rgba(157,209,255,.2);background-blend-mode:screen}
+.hero::after{z-index:1;animation:none}
 .hero-inner{z-index:2}
-@keyframes lantanaHeroLight{0%,100%{opacity:.16}28%{opacity:.78}53%{opacity:1}78%{opacity:.36}}
-@keyframes lantanaHeroShade{0%,100%{opacity:1}28%{opacity:.72}53%{opacity:.56}78%{opacity:.9}}
-@media(prefers-reduced-motion:reduce){.hero::before,.hero::after{animation:none}.hero::before{opacity:.4}}
+@media(prefers-reduced-motion:no-preference){
+.hero::before{animation:lantanaJapaneseSunrise 12s ease-in-out infinite}
+.hero .hero-daylight{animation:lantanaJapaneseDaylight 12s ease-in-out infinite}
+@keyframes lantanaJapaneseSunrise{0%,8%{opacity:.95}30%,88%{opacity:0}100%{opacity:.95}}
+@keyframes lantanaJapaneseDaylight{0%,18%{opacity:0}36%,51%{opacity:1}70%,100%{opacity:0}}
+}
+@media(prefers-reduced-motion:reduce){.hero::before,.hero .hero-daylight{animation:none;opacity:0}}
