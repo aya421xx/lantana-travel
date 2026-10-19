@@ -69,3 +69,13 @@
 /* Pull search controls further into the hero after removing the redundant CTA. */
 .searchbox{margin-top:-155px}
 @media(max-width:700px){.searchbox{margin-top:-95px}}
+
+/* Refine hero composition: raise the copy and overlap the search card on the Venice/Fuji photo. */
+@media(min-width:701px){
+ .hero-inner{transform:translateY(-68px)}
+ .searchbox{margin-top:-235px}
+}
+@media(max-width:700px){
+ .hero-inner{transform:translateY(-45px)}
+ .searchbox{margin-top:-125px}
+}
