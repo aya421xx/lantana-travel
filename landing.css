@@ -57,3 +57,7 @@
 @keyframes lantanaJapaneseDaylight{0%,18%{opacity:0}36%,51%{opacity:1}70%,100%{opacity:0}}
 }
 @media(prefers-reduced-motion:reduce){.hero::before,.hero .hero-daylight{animation:none;opacity:0}}
+
+/* Make the Japanese hero as expansive as the English homepage hero. */
+.hero{height:auto;min-height:0;aspect-ratio:1891/760;max-height:none}
+@media(max-width:700px){.hero{height:clamp(520px,85svh,760px);min-height:520px;aspect-ratio:auto}}
