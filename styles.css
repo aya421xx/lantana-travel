@@ -146,3 +146,29 @@ html[lang="en"] .home-journey-info h3{font-size:clamp(30px,3vw,50px)}
 }
 @media(prefers-reduced-motion:reduce){#home .hero-sunrise,#home .hero-daylight{animation:none!important;opacity:0!important}}
 
+
+/* Refined journey arches: crisp double gold arc above, gentle fade only at bottom. */
+#home .home-journey-tile{isolation:isolate}
+#home .home-journey-tile>.home-journey-photo{
+ -webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 88%,rgba(0,0,0,.93) 94%,transparent 100%);
+ mask-image:linear-gradient(to bottom,#000 0%,#000 88%,rgba(0,0,0,.93) 94%,transparent 100%);
+}
+#home .home-journey-tile::before{
+ content:"";position:absolute;z-index:1;pointer-events:none;
+ top:-13px;right:-12px;bottom:13px;left:calc(12% - 13px);
+ border:1px solid rgba(174,137,94,.72);
+ border-radius:55% 55% 0 0 / 42% 42% 0 0;
+ border-bottom:0;
+}
+#home .home-journey-tile::after{
+ content:"";display:block;position:absolute;z-index:1;pointer-events:none;
+ top:-23px;right:-22px;bottom:23px;left:calc(12% - 23px);
+ border:1px solid rgba(174,137,94,.3);
+ border-radius:55% 55% 0 0 / 42% 42% 0 0;
+ border-bottom:0;background:none;
+}
+#home .home-journey-tile>.home-journey-info{z-index:3}
+@media(max-width:760px){
+ #home .home-journey-tile::before{top:-9px;right:-9px;left:calc(12% - 9px)}
+ #home .home-journey-tile::after{top:-16px;right:-16px;left:calc(12% - 16px)}
+}
