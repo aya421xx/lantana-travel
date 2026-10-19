@@ -146,38 +146,3 @@ html[lang="en"] .home-journey-info h3{font-size:clamp(30px,3vw,50px)}
 }
 @media(prefers-reduced-motion:reduce){#home .hero-sunrise,#home .hero-daylight{animation:none!important;opacity:0!important}}
 
-/* Journey gateway refinement: soften cut-out edges and visually unite photo, copy and cream canvas. */
-#home .home-journey-tile{isolation:isolate}
-#home .home-journey-tile>.home-journey-photo{
- -webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 67%,rgba(0,0,0,.86) 79%,transparent 100%);
- mask-image:linear-gradient(to bottom,#000 0%,#000 67%,rgba(0,0,0,.86) 79%,transparent 100%);
-}
-#home .home-journey-tile>.home-journey-photo::after{
- background:linear-gradient(90deg,rgba(248,246,241,.96) 0%,rgba(248,246,241,.54) 22%,rgba(248,246,241,.04) 62%,transparent 80%);
-}
-#home .home-journey-tile::before{
- content:"";position:absolute;z-index:-1;inset:9% -3% 4% 10%;pointer-events:none;
- background:radial-gradient(ellipse at 56% 43%,rgba(192,160,127,.14),transparent 66%);
- filter:blur(25px);
-}
-#home .japan-tile::before{
- background:radial-gradient(ellipse at 56% 43%,rgba(122,177,190,.16),transparent 66%);
-}
-#home .home-journey-tile>.home-journey-info{z-index:3}
-#home .home-journey-explore{
- backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);
- box-shadow:0 12px 36px rgba(32,59,67,.06);
- transition:background-color .4s ease,box-shadow .4s ease,transform .4s ease;
-}
-@media(hover:hover) and (prefers-reduced-motion:no-preference){
- #home .home-journey-tile:hover .home-journey-explore{
-  transform:translateY(-4px);background-color:rgba(255,255,255,.96);
-  box-shadow:0 18px 38px rgba(32,59,67,.13);
- }
-}
-@media(max-width:760px){
- #home .home-journey-tile>.home-journey-photo{
-  -webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 72%,transparent 100%);
-  mask-image:linear-gradient(to bottom,#000 0%,#000 72%,transparent 100%);
- }
-}
