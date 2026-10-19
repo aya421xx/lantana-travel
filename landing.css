@@ -65,3 +65,7 @@
 /* Raise the search panel slightly over the bottom of the hero image. */
 .searchbox{margin-top:-105px}
 @media(max-width:700px){.searchbox{margin-top:-65px}}
+
+/* Pull search controls further into the hero after removing the redundant CTA. */
+.searchbox{margin-top:-155px}
+@media(max-width:700px){.searchbox{margin-top:-95px}}
