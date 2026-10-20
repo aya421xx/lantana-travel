@@ -223,3 +223,22 @@
  .hero-inner{left:50%;top:31%;transform:translate(-50%,-50%);width:94%}
  .hero-text-glow{width:110%;height:110%;background:radial-gradient(ellipse at center,rgba(255,255,255,.73),rgba(255,255,255,.45) 39%,rgba(255,255,255,0) 78%)}
 }
+
+/* 2026-10-20: prevent the recommended-plans heading from sliding under the hero.
+   Keep photo, glow and editable text as independent layers. */
+.hero{overflow:hidden}
+.hero-inner{isolation:isolate}
+.hero-text-glow{display:block;position:absolute;left:50%;top:50%;width:90%;height:106%;transform:translate(-50%,-50%);z-index:-1;pointer-events:none;border-radius:50%;background:radial-gradient(ellipse at center,rgba(255,255,255,.56) 0%,rgba(255,255,255,.43) 30%,rgba(255,255,255,.16) 56%,transparent 76%)}
+@media(min-width:701px){
+ .hero{min-height:760px;aspect-ratio:2/1}
+ .hero-inner{top:33%;left:50%;width:min(940px,90%);transform:translate(-50%,-50%)}
+ .hero + .searchbox{margin-top:-260px;margin-bottom:120px}
+ #plans{margin-top:0;padding-top:28px;position:relative;z-index:1}
+}
+@media(max-width:700px){
+ .hero{min-height:680px;height:clamp(680px,95svh,800px)}
+ .hero-inner{top:29%;left:50%;transform:translate(-50%,-50%)}
+ .hero-text-glow{width:105%;height:110%;background:radial-gradient(ellipse at center,rgba(255,255,255,.62),rgba(255,255,255,.34) 43%,transparent 78%)}
+ .hero + .searchbox{margin-top:-110px;margin-bottom:105px}
+ #plans{margin-top:0;padding-top:22px;position:relative;z-index:1}
+}
