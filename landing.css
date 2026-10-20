@@ -81,3 +81,17 @@
  .hero-inner{transform:translateY(-78px)}
  .hero + .searchbox{width:92%;margin:-105px auto 28px;position:relative;z-index:6;background:rgba(255,255,255,.05);-webkit-backdrop-filter:none;backdrop-filter:none;border:1px solid rgba(255,255,255,.55);box-shadow:0 12px 30px rgba(15,42,50,.12)}
 }
+
+/* Improve text legibility over the nearly transparent photo overlay. */
+.hero + .searchbox .search-head h2,
+.hero + .searchbox .search-head span,
+.hero + .searchbox .searchgrid label,
+.hero + .searchbox .quick > span{
+ color:#123642;
+ font-weight:700;
+ text-shadow:0 1px 2px rgba(255,255,255,.95),0 0 7px rgba(255,255,255,.8);
+}
+.hero + .searchbox .search-head span{font-weight:600}
+.hero + .searchbox .searchgrid select,
+.hero + .searchbox .searchgrid input{color:#123642;font-weight:600}
+.hero + .searchbox .quick a{color:#123642;font-weight:650;text-shadow:0 1px 2px rgba(255,255,255,.8)}
