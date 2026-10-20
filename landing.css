@@ -62,24 +62,8 @@
 .hero{height:auto;min-height:0;aspect-ratio:1891/760;max-height:none}
 @media(max-width:700px){.hero{height:clamp(520px,85svh,760px);min-height:520px;aspect-ratio:auto}}
 
-/* Raise the search panel slightly over the bottom of the hero image. */
-.searchbox{margin-top:-105px}
-@media(max-width:700px){.searchbox{margin-top:-65px}}
 
-/* Pull search controls further into the hero after removing the redundant CTA. */
-.searchbox{margin-top:-155px}
-@media(max-width:700px){.searchbox{margin-top:-95px}}
-
-/* Refine hero composition: raise the copy and overlap the search card on the Venice/Fuji photo. */
-@media(min-width:701px){
- .hero-inner{transform:translateY(-68px)}
- .searchbox{margin-top:-235px}
-}
-@media(max-width:700px){
- .hero-inner{transform:translateY(-45px)}
- .searchbox{margin-top:-125px}
-}
-
-/* Keep the search form immediately below the hero, without covering either photo. */
-.searchbox{margin-top:0}
-@media(max-width:700px){.searchbox{margin-top:0}}
+/* Final non-overlapping layout: search is a normal block after the hero. */
+.hero{margin-bottom:0;overflow:hidden}
+.hero + .searchbox{display:block;clear:both;margin:0 auto;padding-top:24px;transform:none;top:auto;bottom:auto;left:auto;right:auto;float:none}
+@media(max-width:700px){.hero + .searchbox{margin:0 auto;padding-top:20px}}
