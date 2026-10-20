@@ -266,3 +266,8 @@
 .hero-inner p{position:relative;isolation:isolate;z-index:1}
 .hero-inner p::before{content:"";position:absolute;z-index:-1;pointer-events:none;left:50%;top:50%;transform:translate(-50%,-50%);width:min(720px,125%);height:190%;border-radius:50%;background:radial-gradient(ellipse at center,rgba(255,255,255,.96) 0%,rgba(255,255,255,.89) 29%,rgba(255,255,255,.62) 51%,rgba(255,255,255,.22) 68%,transparent 84%)}
 @media(max-width:700px){.hero-inner p::before{width:115%;height:170%;background:radial-gradient(ellipse at center,rgba(255,255,255,.96),rgba(255,255,255,.83) 32%,rgba(255,255,255,.38) 62%,transparent 84%)}}
+
+/* Soft text-only white illumination, without a visible oval edge. */
+.hero-text-glow{width:92%;height:115%;top:53%;border-radius:0;background:radial-gradient(ellipse at center,rgba(255,255,255,.73) 0%,rgba(255,255,255,.43) 35%,rgba(255,255,255,.13) 65%,transparent 90%);filter:blur(32px)}
+.hero-inner p::before{width:min(550px,108%);height:138%;border-radius:0;background:radial-gradient(ellipse at center,rgba(255,255,255,.88),rgba(255,255,255,.58) 36%,rgba(255,255,255,.12) 70%,transparent 96%);filter:blur(25px)}
+@media(max-width:700px){.hero-text-glow{width:105%;height:116%;filter:blur(20px)}.hero-inner p::before{width:108%;height:135%;filter:blur(16px)}}
