@@ -242,3 +242,8 @@
  .hero + .searchbox{margin-top:-110px;margin-bottom:105px}
  #plans{margin-top:0;padding-top:22px;position:relative;z-index:1}
 }
+
+/* Clearer but still feathered white light behind hero lettering. */
+.hero-text-glow{background:radial-gradient(ellipse at center,rgba(255,255,255,.78) 0%,rgba(255,255,255,.62) 30%,rgba(255,255,255,.27) 55%,rgba(255,255,255,0) 77%)}
+@media(max-width:700px){.hero-text-glow{background:radial-gradient(ellipse at center,rgba(255,255,255,.80),rgba(255,255,255,.57) 39%,rgba(255,255,255,0) 78%)}}
+.searchgrid select:disabled{color:#78888e;background:rgba(255,255,255,.75);cursor:not-allowed}
