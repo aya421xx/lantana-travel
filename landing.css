@@ -133,3 +133,30 @@
  .hero-kicker,.hero-inner h1,.hero-inner p{color:#173e4c;text-shadow:0 1px 8px rgba(255,255,255,.8)}
  .hero + .searchbox{margin-top:-130px;background:rgba(255,255,255,.10)}
 }
+
+/* Final hero: reproduce the approved Venice/Fuji composition with live HTML controls. */
+.hero,.hero::before,.hero .hero-daylight{background-image:url('assets/lantana-hero-venice-fuji-new.png');background-position:center center;background-size:cover;background-repeat:no-repeat}
+.hero::after{background:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,.015) 65%,rgba(18,44,55,.04))}
+@media(min-width:701px){
+ .hero{height:auto;min-height:760px;aspect-ratio:2/1;align-items:flex-start}
+ .hero-inner{top:clamp(75px,7vw,125px);width:min(1000px,92%);transform:none;text-align:center}
+ .hero-kicker{display:block;color:#1a4353;font:600 clamp(11px,1vw,15px) Georgia,serif;letter-spacing:.32em;text-shadow:0 1px 7px #fff9}
+ .hero-kicker::after{content:"";display:block;width:95px;height:1px;margin:19px auto 0;background:#365763}
+ .hero-inner h1{color:#1a4353;font-family:"Shippori Mincho","Noto Serif JP",serif;font-weight:500;font-size:clamp(39px,3.5vw,63px);letter-spacing:.055em;line-height:1.45;margin:15px auto 0;text-shadow:0 1px 8px #fff8}
+ .hero-inner h1::after{content:"";display:block;width:min(490px,75%);height:1px;background:rgba(30,68,82,.35);margin:20px auto 13px}
+ .hero-inner p{color:#1a4353;font-family:"Shippori Mincho","Noto Serif JP",serif;font-size:clamp(15px,1.2vw,21px);line-height:1.8;letter-spacing:.05em;font-weight:600;text-shadow:0 1px 8px #fff9}
+ .hero + .searchbox{width:min(1570px,91%);margin:-350px auto 75px;padding:26px 38px 27px;background:rgba(255,255,255,.48);border:1px solid rgba(255,255,255,.65);border-radius:15px;box-shadow:0 12px 35px rgba(16,43,55,.13)}
+ .hero + .searchbox .search-head{margin-bottom:18px}
+ .hero + .searchbox .search-head h2{font-size:23px}
+ .hero + .searchbox .searchgrid select,.hero + .searchbox .searchgrid input{background:rgba(255,255,255,.94)}
+}
+@media(max-width:700px){
+ .hero{height:clamp(590px,90svh,750px);min-height:590px;aspect-ratio:auto;background-position:center}
+ .hero-inner{top:75px;transform:none;text-align:center}
+ .hero-kicker{color:#1a4353;font-size:10px;text-shadow:0 1px 8px #fff}
+ .hero-kicker::after{content:"";display:block;width:65px;height:1px;margin:12px auto 0;background:#365763}
+ .hero-inner h1{font-family:"Shippori Mincho","Noto Serif JP",serif;font-weight:500;color:#1a4353;font-size:clamp(29px,7.1vw,42px);line-height:1.45;text-shadow:0 1px 8px #fff}
+ .hero-inner h1::after{content:"";display:block;width:70%;height:1px;margin:14px auto 12px;background:rgba(30,68,82,.35)}
+ .hero-inner p{font-family:"Shippori Mincho","Noto Serif JP",serif;color:#1a4353;font-size:13px;text-shadow:0 1px 8px #fff}
+ .hero + .searchbox{margin:-135px auto 30px;background:rgba(255,255,255,.60);border-radius:12px}
+}
