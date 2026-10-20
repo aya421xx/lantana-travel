@@ -252,3 +252,7 @@
 .hero-text-glow{width:82%;height:88%;background:radial-gradient(ellipse at center,rgba(255,255,255,.82) 0%,rgba(255,255,255,.62) 25%,rgba(255,255,255,.30) 46%,rgba(255,255,255,0) 72%)}
 @media(min-width:701px){.hero-text-glow{width:82%;height:88%}}
 @media(max-width:700px){.hero-text-glow{width:92%;height:90%;background:radial-gradient(ellipse at center,rgba(255,255,255,.84),rgba(255,255,255,.58) 28%,transparent 74%)}}
+
+/* Lift search panel slightly while keeping the following section clear. */
+@media(min-width:701px){.hero + .searchbox{margin-top:-305px;margin-bottom:165px}}
+@media(max-width:700px){.hero + .searchbox{margin-top:-135px;margin-bottom:130px}}
