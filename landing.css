@@ -160,3 +160,8 @@
  .hero-inner p{font-family:"Shippori Mincho","Noto Serif JP",serif;color:#1a4353;font-size:13px;text-shadow:0 1px 8px #fff}
  .hero + .searchbox{margin:-135px auto 30px;background:rgba(255,255,255,.60);border-radius:12px}
 }
+
+/* Disable dawn/day/evening lighting: show the original uploaded photo consistently. */
+.hero::before,.hero .hero-daylight{display:none!important;animation:none!important;opacity:0!important}
+.hero{animation:none!important;filter:none!important}
+.hero::after{animation:none!important}
