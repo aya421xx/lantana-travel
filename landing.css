@@ -177,3 +177,13 @@
  .hero-inner{position:absolute;top:43%;left:50%;width:94%;margin:0;transform:translate(-50%,-50%);text-align:center;z-index:3}
  .hero-inner::before{content:"";position:absolute;z-index:-1;inset:-28px -12px;background:radial-gradient(ellipse at center,rgba(255,255,255,.78) 0%,rgba(255,255,255,.43) 46%,rgba(255,255,255,0) 85%);pointer-events:none}
 }
+
+/* Center headline within the hero with a feathered white glow, not a solid panel. */
+@media(min-width:701px){
+ .hero-inner{position:absolute;left:50%;top:50%;width:min(980px,92%);margin:0;transform:translate(-50%,-50%);text-align:center;z-index:3}
+ .hero-inner::before{content:"";position:absolute;inset:-45px -70px;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at center,rgba(255,255,255,.65) 0%,rgba(255,255,255,.35) 48%,rgba(255,255,255,0) 82%)}
+}
+@media(max-width:700px){
+ .hero-inner{position:absolute;left:50%;top:42%;width:94%;margin:0;transform:translate(-50%,-50%);text-align:center;z-index:3}
+ .hero-inner::before{content:"";position:absolute;inset:-30px -10px;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at center,rgba(255,255,255,.72),rgba(255,255,255,.34) 52%,transparent 85%)}
+}
