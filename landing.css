@@ -247,3 +247,8 @@
 .hero-text-glow{background:radial-gradient(ellipse at center,rgba(255,255,255,.78) 0%,rgba(255,255,255,.62) 30%,rgba(255,255,255,.27) 55%,rgba(255,255,255,0) 77%)}
 @media(max-width:700px){.hero-text-glow{background:radial-gradient(ellipse at center,rgba(255,255,255,.80),rgba(255,255,255,.57) 39%,rgba(255,255,255,0) 78%)}}
 .searchgrid select:disabled{color:#78888e;background:rgba(255,255,255,.75);cursor:not-allowed}
+
+/* Tight feathered glow confined to the headline, not the entire photograph. */
+.hero-text-glow{width:82%;height:88%;background:radial-gradient(ellipse at center,rgba(255,255,255,.82) 0%,rgba(255,255,255,.62) 25%,rgba(255,255,255,.30) 46%,rgba(255,255,255,0) 72%)}
+@media(min-width:701px){.hero-text-glow{width:82%;height:88%}}
+@media(max-width:700px){.hero-text-glow{width:92%;height:90%;background:radial-gradient(ellipse at center,rgba(255,255,255,.84),rgba(255,255,255,.58) 28%,transparent 74%)}}
