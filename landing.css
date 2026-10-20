@@ -71,7 +71,7 @@
 /* Editorial hero overlay: a translucent search panel across the lower edge of the scenery. */
 @media(min-width:701px){
  .hero-inner{transform:translateY(-105px)}
- .hero + .searchbox{width:min(1160px,90%);margin:-220px auto 36px;padding:22px 26px;position:relative;z-index:6;background:rgba(255,255,255,.25);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);border:1px solid rgba(255,255,255,.55);box-shadow:0 15px 40px rgba(15,42,50,.13)}
+ .hero + .searchbox{width:min(1160px,90%);margin:-220px auto 36px;padding:22px 26px;position:relative;z-index:6;background:rgba(255,255,255,.05);-webkit-backdrop-filter:none;backdrop-filter:none;border:1px solid rgba(255,255,255,.55);box-shadow:0 15px 40px rgba(15,42,50,.13)}
  .hero + .searchbox .search-head{margin-bottom:13px}
  .hero + .searchbox .search-head h2{font-size:19px}
  .hero + .searchbox .searchgrid select,.hero + .searchbox .searchgrid input{background:rgba(255,255,255,.86)}
@@ -79,5 +79,5 @@
 }
 @media(max-width:700px){
  .hero-inner{transform:translateY(-78px)}
- .hero + .searchbox{width:92%;margin:-105px auto 28px;position:relative;z-index:6;background:rgba(255,255,255,.35);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);border:1px solid rgba(255,255,255,.55);box-shadow:0 12px 30px rgba(15,42,50,.12)}
+ .hero + .searchbox{width:92%;margin:-105px auto 28px;position:relative;z-index:6;background:rgba(255,255,255,.05);-webkit-backdrop-filter:none;backdrop-filter:none;border:1px solid rgba(255,255,255,.55);box-shadow:0 12px 30px rgba(15,42,50,.12)}
 }
