@@ -96,3 +96,20 @@
 .hero + .searchbox .searchgrid input{color:#123642;font-weight:600}
 .hero + .searchbox .quick a{color:#123642;font-weight:650;text-shadow:0 1px 2px rgba(255,255,255,.8)}
 
+
+/* Centered editorial headline matching the approved visual direction. */
+@media(min-width:701px){
+ .hero{align-items:flex-start}
+ .hero-inner{width:min(850px,88%);margin:0 auto;transform:none;position:relative;top:clamp(55px,6vw,115px);text-align:center}
+ .hero-inner h1{max-width:none;margin:18px auto 15px;font-size:clamp(35px,3.6vw,60px);line-height:1.45;letter-spacing:.06em;white-space:normal}
+ .hero-inner p{font-size:clamp(14px,1.2vw,18px);line-height:1.9}
+ .hero-kicker{letter-spacing:.34em}
+ .hero + .searchbox{margin-top:-205px}
+}
+@media(max-width:700px){
+ .hero{align-items:flex-start}
+ .hero-inner{width:92%;margin:0 auto;transform:none;position:relative;top:clamp(70px,14vw,120px);text-align:center}
+ .hero-inner h1{max-width:100%;font-size:clamp(28px,7vw,40px);line-height:1.5}
+ .hero-inner p{font-size:14px}
+ .hero-kicker{letter-spacing:.18em;font-size:10px}
+}
