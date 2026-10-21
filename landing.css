@@ -320,3 +320,15 @@
  .hero-inner,.hero .hero-inner{top:45%;left:50%;transform:translate(-50%,-50%)}
  .hero .hero-inner .searchbox{margin-top:10px}
 }
+
+/* Verified override: noticeably shorter photo area and higher search controls. */
+@media(min-width:701px){
+ body main > section.hero{height:480px!important;min-height:480px!important;max-height:480px!important;aspect-ratio:auto!important;background-position:center bottom!important;background-size:cover!important}
+ body main > section.hero .hero-inner{top:43%!important}
+ body main > section.hero .hero-inner .searchbox{margin-top:8px!important}
+}
+@media(max-width:700px){
+ body main > section.hero{height:550px!important;min-height:550px!important;max-height:550px!important;background-position:center bottom!important}
+ body main > section.hero .hero-inner{top:42%!important}
+ body main > section.hero .hero-inner .searchbox{margin-top:7px!important}
+}
