@@ -291,3 +291,8 @@
 @media(min-width:1001px){.hero + .searchbox{width:min(950px,88%);margin-top:-260px;margin-bottom:165px;padding:11px 14px 12px;border-radius:6px;background:rgba(255,255,255,.46)}}
 @media(min-width:701px) and (max-width:1000px){.hero + .searchbox{width:94%;margin-top:-245px;margin-bottom:120px;padding:11px 12px}.hero + .searchbox .searchgrid{grid-template-columns:1fr 1.25fr .8fr 1.15fr 1.25fr;gap:5px}.hero + .searchbox .searchgrid button{grid-column:auto;padding:0 4px;font-size:10px}}
 @media(max-width:700px){.hero + .searchbox{width:92%;margin-top:-125px;margin-bottom:90px;padding:13px 12px;border-radius:7px}.hero + .searchbox .searchgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.hero + .searchbox .searchgrid label{font-size:10px}.hero + .searchbox .searchgrid button{grid-column:1/-1;height:36px}.hero + .searchbox .searchgrid select,.hero + .searchbox .searchgrid input{height:36px}}
+
+/* Position the compact search directly beneath the hero's two-line subheading. */
+@media(min-width:1001px){.hero + .searchbox{margin-top:-365px;margin-bottom:270px}}
+@media(min-width:701px) and (max-width:1000px){.hero + .searchbox{margin-top:-350px;margin-bottom:225px}}
+@media(max-width:700px){.hero + .searchbox{margin-top:-250px;margin-bottom:215px}}
