@@ -355,3 +355,7 @@
 @media(max-width:700px){
  body main>section.hero .hero-inner{top:48%!important}
 }
+
+/* Definitive visible re-centering of hero content */
+@media(min-width:701px){html body main section.hero > .hero-inner{top:56%!important;transform:translate(-50%,-50%)!important}}
+@media(max-width:700px){html body main section.hero > .hero-inner{top:51%!important;transform:translate(-50%,-50%)!important}}
