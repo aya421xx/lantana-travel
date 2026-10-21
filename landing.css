@@ -332,3 +332,14 @@
  body main > section.hero .hero-inner{top:42%!important}
  body main > section.hero .hero-inner .searchbox{margin-top:7px!important}
 }
+
+/* Restore the hero to approximately 80% of its original 760px height.
+   Centering the artwork prevents the upper Venice/Fuji scene being cropped away. */
+@media(min-width:701px){
+ body main > section.hero{height:610px!important;min-height:610px!important;max-height:610px!important;background-position:center center!important}
+ body main > section.hero .hero-inner{top:43%!important}
+}
+@media(max-width:700px){
+ body main > section.hero{height:640px!important;min-height:640px!important;max-height:640px!important;background-position:center center!important}
+ body main > section.hero .hero-inner{top:43%!important}
+}
