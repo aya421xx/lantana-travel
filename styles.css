@@ -172,8 +172,3 @@ html[lang="en"] .home-journey-info h3{font-size:clamp(30px,3vw,50px)}
  #home .home-journey-tile::before{top:-9px;right:-9px;left:calc(12% - 9px)}
  #home .home-journey-tile::after{top:-16px;right:-16px;left:calc(12% - 16px)}
 }
-
-/* Kanazawa only: show a wider view of Kenrokuen without cropping to the trees. */
-#kanazawa .journey-photo{background:#e6e9e5}
-#kanazawa .journey-photo img{display:block;width:100%;height:auto;aspect-ratio:1.18;object-fit:contain;object-position:center center;transform:none}
-#kanazawa .journey-card-open:hover img{transform:none}
