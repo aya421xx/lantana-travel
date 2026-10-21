@@ -308,3 +308,15 @@
 .hero .hero-inner .searchbox .search-date-note[hidden]{display:none}
 @media(min-width:701px){.hero .hero-inner{width:min(1100px,96%)}.hero .hero-inner .searchbox{margin-top:24px}}
 @media(max-width:700px){.hero .hero-inner .searchbox{width:94vw;max-width:94vw;margin:16px 50% 0;transform:translateX(-50%);padding:11px 10px}.hero .hero-inner .searchbox .searchgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.hero .hero-inner .searchbox .searchgrid button{grid-column:1/-1;height:36px}.hero .hero-inner .searchbox .searchgrid select,.hero .hero-inner .searchbox .searchgrid input{height:36px}}
+
+/* Shorter hero composition: preserve the Venice waterfront, Fuji and lower-right sakura. */
+@media(min-width:701px){
+ .hero{height:520px;min-height:520px;max-height:520px;aspect-ratio:auto;background-size:cover;background-position:center bottom}
+ .hero-inner,.hero .hero-inner{top:46%;left:50%;transform:translate(-50%,-50%);width:min(1100px,96%)}
+ .hero .hero-inner .searchbox{margin-top:12px}
+}
+@media(max-width:700px){
+ .hero{height:610px;min-height:610px;max-height:none;background-size:cover;background-position:center bottom}
+ .hero-inner,.hero .hero-inner{top:45%;left:50%;transform:translate(-50%,-50%)}
+ .hero .hero-inner .searchbox{margin-top:10px}
+}
