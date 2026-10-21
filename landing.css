@@ -296,3 +296,15 @@
 @media(min-width:1001px){.hero + .searchbox{margin-top:-365px;margin-bottom:270px}}
 @media(min-width:701px) and (max-width:1000px){.hero + .searchbox{margin-top:-350px;margin-bottom:225px}}
 @media(max-width:700px){.hero + .searchbox{margin-top:-250px;margin-bottom:215px}}
+
+/* Search panel lives inside the hero, directly after the supporting text. */
+.hero .hero-inner{overflow:visible}
+.hero .hero-inner .searchbox{position:relative;top:auto;left:auto;right:auto;bottom:auto;transform:none;float:none;clear:both;width:min(950px,92vw);max-width:92vw;margin:22px auto 0;padding:11px 14px 12px;background:rgba(255,255,255,.46);border:1px solid rgba(255,255,255,.68);border-radius:6px;box-shadow:0 12px 35px #102b3721;text-align:left;z-index:7}
+.hero .hero-inner .searchbox .searchgrid{display:grid;grid-template-columns:minmax(115px,1fr) minmax(135px,1.35fr) minmax(100px,.78fr) minmax(145px,1.1fr) minmax(148px,1.2fr);gap:7px;align-items:end}
+.hero .hero-inner .searchbox .searchgrid label{font:600 10px "Noto Sans JP",sans-serif;display:grid;gap:4px;min-width:0;color:#123642;text-shadow:0 1px 3px #fffd}
+.hero .hero-inner .searchbox .searchgrid select,.hero .hero-inner .searchbox .searchgrid input{width:100%;min-width:0;height:35px;border:1px solid #d9dfdf;background:#fffe;color:#123642;font-size:11px;padding:0 8px;border-radius:2px}
+.hero .hero-inner .searchbox .searchgrid button{height:35px;min-height:35px;border:0;background:#bc9258;color:#fff;border-radius:2px;padding:0 9px;font-size:11px;font-weight:700;white-space:nowrap;grid-column:auto}
+.hero .hero-inner .searchbox .search-date-note{font-size:10px;margin:7px 0 0;color:#123642}
+.hero .hero-inner .searchbox .search-date-note[hidden]{display:none}
+@media(min-width:701px){.hero .hero-inner{width:min(1100px,96%)}.hero .hero-inner .searchbox{margin-top:24px}}
+@media(max-width:700px){.hero .hero-inner .searchbox{width:94vw;max-width:94vw;margin:16px 50% 0;transform:translateX(-50%);padding:11px 10px}.hero .hero-inner .searchbox .searchgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.hero .hero-inner .searchbox .searchgrid button{grid-column:1/-1;height:36px}.hero .hero-inner .searchbox .searchgrid select,.hero .hero-inner .searchbox .searchgrid input{height:36px}}
