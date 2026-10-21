@@ -347,3 +347,11 @@
 /* Hero 90 percent: definitive layout override */
 @media(min-width:701px){body main>section.hero{height:684px!important;min-height:684px!important;max-height:684px!important;background-position:center 35%!important}body main>section.hero .hero-inner{top:43%!important}}
 @media(max-width:700px){body main>section.hero{height:690px!important;min-height:690px!important;max-height:690px!important;background-position:center 35%!important}}
+
+/* Balanced hero composition: shift the whole text-and-search group slightly downward. */
+@media(min-width:701px){
+ body main>section.hero .hero-inner{top:51%!important}
+}
+@media(max-width:700px){
+ body main>section.hero .hero-inner{top:48%!important}
+}
