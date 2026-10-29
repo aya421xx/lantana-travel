@@ -7,3 +7,8 @@
 .form-card{padding:36px 38px}
 @media(max-width:850px){.form-wrap{grid-template-columns:1fr;gap:24px;max-width:650px}.form-area{padding-top:42px;padding-bottom:42px}}
 @media(max-width:650px){.form-info h2{font-size:clamp(25px,6vw,32px)}.form-card{padding:26px 22px}}
+
+/* Two-line consultation heading with understated divider */
+.form-info h2{font-size:clamp(24px,2.15vw,32px);letter-spacing:0;line-height:1.7;white-space:nowrap;margin-bottom:20px}
+.form-info h2::after{content:"";display:block;width:96px;height:1px;background:#b99461;margin-top:20px}
+@media(max-width:650px){.form-info h2{font-size:clamp(21px,5vw,28px)}}
